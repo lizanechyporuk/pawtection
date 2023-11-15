@@ -1,0 +1,560 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -------------------------------
+         LIGHT/DARK MODE
+------------------------------- */
+[data-theme="light"] {
+  --mainColor-bg-mainPage: var(--mainColorLight);
+  --secondaryColor-bg-mainPage: var(--secondaryColorLight);
+  --color-text-mainPage: var(--blackTextColor);
+  --background-text-mainPage: var(--whiteTextColor);
+  /* --color-bgForm-loginPage: var(--whiteTextColor);
+  --color-textForm-loginPage: var(--blackTextColor); */
+}
+
+[data-theme="dark"] {
+  --mainColor-bg-mainPage: var(--mainColorDark);
+  --secondaryColor-bg-mainPage: var(--secondaryColorDark);
+  --color-text-mainPage: var(--whiteTextColor);
+  --background-text-mainPage: var(--blackTextColor);
+  /* --color-bgForm-loginPage: var(--blackTextColor);
+  --color-textForm-loginPage: var(--whiteTextColor); */
+}
+
+html {
+  /* --- Custom properties --- */
+  /* COLORS */
+  --mainColorLight: #fadcb1;
+  --mainColorDark: #a5a189;
+  --secondaryColorLight: #cffab1;
+  --secondaryColorDark: #73965a;
+  --whiteTextColor: #fff;
+  --blackTextColor: #333;
+  /* FONTS */
+  --loginPageFont: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+/* -------------------------------
+          MAIN PAGE
+------------------------------- */
+.mainPage {
+  font-family: var(--mainPageFont);
+  min-height: 100vh;
+  min-width: 250px;
+  background: var(--mainColor-bg-mainPage);
+  transition: 1s;
+}
+
+/* -------------------------------
+             NAVBAR
+------------------------------- */
+.mainPage .nav-container .navbar {
+  background: var(--secondaryColor-bg-mainPage);
+  font-size: 1.5rem;
+  transition: 1s;
+}
+.mainPage .nav-container .navbar .navbar-toggler {
+  color: var(--color-text-mainPage);
+}
+.mainPage .nav-container .navbar .navbar-nav .nav-link {
+  color: var(--color-text-mainPage);
+}
+.mainPage .nav-container .navbar .navbar-nav .nav-link:hover {
+  opacity: 75%;
+}
+.mainPage .nav-container .navbar .nav-item.dropdown .dropdown-menu {
+  background: var(--secondaryColor-bg-mainPage);
+}
+.mainPage
+  .nav-container
+  .navbar
+  .nav-item.dropdown
+  .dropdown-menu
+  .dropdown-item,
+.mainPage
+  .nav-container
+  .navbar
+  .nav-item.dropdown
+  .dropdown-menu
+  .dropdown-divider {
+  color: var(--color-text-mainPage);
+}
+.mainPage
+  .nav-container
+  .navbar
+  .nav-item.dropdown
+  .dropdown-menu
+  .dropdown-item:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.mainPage .nav-container .navbar #modeBtn {
+  position: absolute;
+  top: 10%;
+  right: 7%;
+  background: none;
+  border: none;
+  color: var(--color-text-mainPage);
+  font-size: 1.7rem;
+  font-weight: 700;
+  transition: 1s;
+  z-index: 1000;
+}
+.mainPage .nav-container .navbar #modeBtn:hover {
+  opacity: 45%;
+  transition: 0s;
+}
+
+/* -------------------------------
+        HEADLINE ARTICLE
+------------------------------- */
+.mainPage .headline-article-container p {
+  font-size: 1.3rem;
+}
+
+.mainPage .headline-article-container .headline-photo-container {
+  height: 400px;
+  float: left;
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 80%, 30% 50%, 10% 90%, 0 100%);
+  shape-outside: polygon(
+    0 0,
+    100% 0,
+    100% 60%,
+    50% 80%,
+    30% 50%,
+    10% 90%,
+    0 100%
+  );
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mainPage
+  .headline-article-container
+  .headline-photo-container
+  .headline-photo-stroke {
+  stroke: var(--secondaryColor-bg-mainPage);
+  stroke-width: 5;
+  transition: 1s;
+}
+.mainPage .headline-article-container .headline-photo-container h2 {
+  background: var(--background-text-mainPage);
+  color: var(--color-text-mainPage);
+  transition: 1s;
+}
+
+/* -------------------------------
+        LEARN MORE
+------------------------------- */
+.mainPage .learMore-container h2 {
+  color: var(--color-text-mainPage);
+  transition: 1s;
+}
+
+.mainPage .learMore-container .card {
+  background: var(--background-text-mainPage);
+  color: var(--color-text-mainPage);
+  transition: 1s;
+}
+
+/* -------------------------------
+         SHOP OFFERS
+------------------------------- */
+.mainPage .shop-offers-container {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.mainPage .shop-offers-container h1 {
+  color: var(--mainColor-bg-mainPage);
+  transition: 1s;
+}
+
+.mainPage .shop-offers-container .carousel p {
+  color: var(--mainColor-bg-mainPage);
+  transition: 1s;
+}
+
+/* -------------------------------
+      PARAGRAPH 1(About shop)
+------------------------------- */
+
+.mainPage .p-type-1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mainPage .p-type-1 .paragraph-text-container {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(225, 253, 230, 0.5),
+    rgba(42, 97, 48, 0.5)
+  );
+}
+
+.mainPage .p-type-1 .paragraph-text-container.mask {
+  -webkit-mask: radial-gradient(circle 250px at top left, #0000 98%, #000)
+    bottom right;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.mainPage .p-type-1 .paragraph-text-container h2 {
+  color: var(--color-text-mainPage);
+  transition: 1s;
+}
+
+.mainPage .p-type-1 .paragraph-text-container h2 b {
+  color: var(--mainColor-bg-mainPage);
+  background: var(--color-text-mainPage);
+  transition: 1s;
+}
+
+.mainPage .p-type-1 .paragraph-text-container p {
+  font-size: 1rem;
+}
+
+.mainPage .p-type-1 .paragraph-text-container .p-cutout-image {
+  height: 250px;
+  width: 250px;
+  float: left;
+  clip-path: circle(75%);
+  shape-outside: circle(75%);
+  background: transparent;
+}
+
+/* -------------------------------
+PARAGRAPH 3(Our passion and mission)
+------------------------------- */
+
+.mainPage .p-type-3 .p-image-container-big {
+  background: var(--secondaryColor-bg-mainPage);
+  transition: 1s;
+}
+
+.mainPage .p-type-3 .img-big {
+  border: var(--secondaryColor-bg-mainPage) solid 10px;
+  transition: 1s;
+}
+
+.mainPage .p-type-3 h2 b {
+  color: var(--secondaryColor-bg-mainPage);
+  background: rgba(0, 0, 0, 0.4);
+  transition: 1s;
+}
+
+.mainPage .p-type-3 hr {
+  border: var(--secondaryColor-bg-mainPage) solid 0.25rem;
+  transition: 1s;
+}
+
+.mainPage .p-type-3 .p-content-container .p-image-container-small {
+  height: 250px;
+  width: 250px;
+  float: right;
+  clip-path: circle(50%);
+  shape-outside: circle(50%);
+}
+
+/* -------------------------------
+        SAVED ANIMALS
+------------------------------- */
+
+/* text content */
+.mainPage .savedPets-container {
+  background: var(--mainColor-bg-mainPage);
+  position: relative;
+  transition: 1s;
+}
+
+.mainPage .savedPets-container h2 {
+  color: var(--color-text-mainPage);
+  font-size: 2rem;
+  transition: 1s;
+}
+
+/* photo grids */
+.savedPets-container .grid,
+.savedPets-container .grid--2 {
+  background: var(--mainColor-bg-mainPage);
+  transition: 1s;
+}
+
+.savedPets-container .grid--2 {
+  display: none;
+}
+
+.savedPets-container .grid:after,
+.savedPets-container .grid--2:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.savedPets-container .grid-sizer,
+.savedPets-container .grid-item,
+.savedPets-container .grid-sizer--2,
+.savedPets-container .grid-item--2 {
+  width: 30%;
+}
+
+.savedPets-container .gutter-sizer,
+.savedPets-container .gutter-sizer--2 {
+  width: 5%;
+}
+
+.savedPets-container .grid-item,
+.savedPets-container .grid-item--2 {
+  float: left;
+  margin-bottom: 42px;
+}
+
+.savedPets-container .grid-item img,
+.savedPets-container .grid-item--2 img {
+  display: block;
+  width: 100%;
+}
+
+/* more btn */
+
+.savedPets-container .savedPets-moreBtn-container {
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    rgba(220, 193, 171, 0),
+    var(--mainColor-bg-mainPage)
+  );
+  transition: 1s;
+}
+
+.savedPets-container .savedPets-moreBtn-container .btn {
+  position: absolute;
+  font-size: 1rem;
+  background: none;
+  border-color: var(--color-text-mainPage);
+  bottom: 0;
+  transition: 1s;
+}
+
+.savedPets-container .savedPets-moreBtn-container .btn:hover {
+  background: var(--color-text-mainPage);
+  color: var(--background-text-mainPage);
+  transition: 1s;
+}
+
+.savedPets-container .savedPets-moreBtn-container .btn span {
+  position: absolute;
+  margin-left: 8px;
+}
+
+/* -------------------------------
+    PARAGRAPH 4(Your support)
+------------------------------- */
+
+.mainPage .yourSupport-container {
+  background: linear-gradient(
+    to right,
+    var(--mainColor-bg-mainPage) 20%,
+    #af9a7c
+  );
+  color: var(--color-text-mainPage);
+  transition: 1s;
+}
+
+.mainPage .yourSupport-container .join-container {
+  background: linear-gradient(#af9a7c, var(--mainColor-bg-mainPage));
+  transition: 1s;
+}
+
+/* -------------------------------
+           FOOTER
+------------------------------- */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--mainColor-bg-mainPage);
+}
+
+.slide {
+  background: var(--secondaryColor-bg-mainPage);
+}
+
+.mainPage .footer-container .content-container {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.125);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainPage .footer-container .content-container .box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainPage .footer-container .content-container .box h2 {
+  color: var(--background-text-mainPage);
+  font-size: 1.5rem;
+}
+
+.mainPage .footer-container .content-container .box button {
+  cursor: pointer;
+  background: var(--background-text-mainPage);
+  color: var(--color-text-mainPage);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.footer-container .formBox {
+  position: absolute;
+  left: 50px;
+  width: 350px;
+  height: 480px;
+  background: var(--background-text-mainPage);
+  color: var(--color-text-mainPage);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.footer-container .formBox a {
+  color: var(--color-text-mainPage);
+  font-size: 1.5rem;
+  transition: 1s;
+}
+
+.footer-container .formBox a:hover {
+  opacity: 25%;
+  transition: 0.3s;
+}
+
+.footer-container .formBox .form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.footer-container .formBox .form.questionForm {
+  top: 100%;
+  transition-delay: 0s;
+}
+
+.footer-container.slide .formBox .form.questionForm {
+  top: 0;
+  transition-delay: 1s;
+}
+
+.footer-container .formBox .form.contactsForm {
+  top: 0;
+  transition-delay: 1s;
+}
+
+.footer-container.slide .formBox .form.contactsForm {
+  top: -100%;
+  transition-delay: 0s;
+}
+
+.footer-container.slide .formBox {
+  left: 400px;
+}
+
+/* -------------------------------
+        MEDIA QUERIES
+------------------------------- */
+@media screen and (max-width: 992px) {
+  /* saved animals */
+  .savedPets-container .savedPets-content h2 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* navbar */
+  .mainPage .nav-container .navbar {
+    font-size: 1rem;
+  }
+
+  .mainPage .nav-container .navbar #modeBtn {
+    top: 3%;
+  }
+
+  .mainPage .nav-container .navbar #modeBtn:hover {
+    opacity: 100%;
+  }
+  /* headline */
+  .mainPage .headline-article-container .headline-photo-container h2 {
+    font-size: 1rem;
+  }
+
+  /* footer */
+
+  .mainPage .footer-container .content-container {
+    flex-direction: column;
+    width: 100%;
+    height: 540px;
+  }
+
+  .mainPage .footer-container .content-container .box h2 {
+    font-size: 1rem;
+  }
+
+  .mainPage .footer-container .content-container .box button {
+    font-size: 0.6rem;
+  }
+
+  .footer-container .formBox {
+    top: 50px;
+    left: 5%;
+    width: 90%;
+    height: 300px;
+  }
+
+  .footer-container .formBox h3 {
+    font-size: 1rem;
+  }
+
+  .footer-container .formBox a {
+    font-size: 1rem;
+  }
+
+  .footer-container .formBox input,
+  .footer-container .formBox textarea {
+    font-size: 0.9rem;
+  }
+
+  .footer-container .formBox .form.questionForm {
+    top: 150%;
+  }
+
+  .footer-container.slide .formBox {
+    left: 5%;
+    top: 200px;
+  }
+
+  .footer-container.slide .formBox .form.contactsForm {
+    top: -150%;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  /* navbar */
+  .mainPage .nav-container .navbar #modeBtn {
+    top: 2%;
+    right: 2%;
+  }
+}
